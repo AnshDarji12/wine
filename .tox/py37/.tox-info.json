@@ -1,0 +1,17 @@
+{
+  "ToxEnv": {
+    "name": "py37",
+    "type": "VirtualEnvRunner"
+  },
+  "Python": {
+    "version_info": [
+      3,
+      7,
+      0,
+      "final",
+      0
+    ],
+    "executable": "C:\\Users\\Ansh\\PycharmProjects\\Devoops\\wine\\env\\python.exe",
+    "virtualenv version": "20.26.2"
+  }
+}

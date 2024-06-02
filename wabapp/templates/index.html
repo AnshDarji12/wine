@@ -4,16 +4,13 @@
 WineQuality
 {% endblock title %}
 
-
 {% block custom_css %}
 <!-- Custom CSS -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 {% endblock custom_css %}
 
-
 {% block body %}
 <!-- nav bar -->
-
 <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top" style="background-color: #e3f2fd;">
     <a class="navbar-brand" href="/">WineQualityPrediction</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -43,7 +40,7 @@ WineQuality
             <div class="row">
                 <div class="col">
                     <form method="POST">
-                        <!-- Input block-->
+                        <!-- Input block -->
                         <div class="form-group">
                             <label for="translation">
                                 <blockquote class="blockquote">
@@ -72,37 +69,30 @@ WineQuality
                                 placeholder="sulphates expected range 0.33 to 2.0"></textarea>
                             <textarea class="form-control" name="alcohol" rows="1"
                                 placeholder="alcohol expected range 8.4 to 14.9"></textarea>
-
                         </div>
 
-                        <!-- Select output language here. -->
-                        <div class="form-group">
-                        </div>
-                        <button type="submit" class="btn btn-primary mb-2">Predict</button></br>
-                        </br>
+                        <button type="submit" class="btn btn-primary mb-2">Predict</button>
                     </form>
-                    <!-- Translated text returned by the Translate API is rendered here. -->
                 </div>
                 <div class="col">
                     <form>
                         <div class="form-group">
-                            <label for="translation-result">
-
+                            <label for="prediction-result">
                                 <blockquote class="blockquote">
                                     <p class="mb-2">Prediction:</p>
                                 </blockquote>
-
                             </label>
-                            <textarea readonly class="form-control" id="exTextarea" rows="5">{{ response }}</textarea>
+                            <textarea readonly class="form-control" id="prediction-result" rows="5">{{ prediction }}</textarea>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+{% endblock body %}
 
-        {% endblock body %}
-
-        {% block custom_js %}
-        <!-- Custom JS -->
-        <script src="{{ url_for('static', filename='script/index.js') }}"></script>
-        {% endblock custom_js %}
+{% block custom_js %}
+<!-- Custom JS -->
+<script src="{{ url_for('static', filename='script/index.js') }}"></script>
+{% endblock custom_js %}
